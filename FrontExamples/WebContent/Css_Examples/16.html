@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>grid</title>
+    <style>
+      #grid{
+        border:5px solid pink;
+        display:grid;
+        grid-template-columns: 150px 1fr;/*  앞 div는 150px로 고정 하고 뒤div는 전체넓이적용 */
+      }
+      div{ /* div는 division의 약자로 제목처럼 의미가있는게 아니라 아무의미없이 디자인을 적용시키기 위한태그 */
+        border:5px solid gray;
+      }
+	/* div와 유사한게 span인데 inline일뿐 용도는 div와 같음 */
+    </style>
+  </head>
+  <body>
+    <div id="grid">
+      <div>NAVIGATION</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    </div>
+  </body>
+</html>
