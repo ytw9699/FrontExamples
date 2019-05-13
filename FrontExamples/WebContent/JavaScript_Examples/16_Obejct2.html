@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>객체와반복문</title>
+  <meta charset="utf-8">
+</head>
+<body>
+	<h1>Object</h1>
+	  <script>
+	  	var coworkers = {//객체는 이렇게 중괄호
+	  			"programmer":"egoing",//마치 키와 값처럼
+	  			"programmer2":"egoing2",
+	  	};
+	  	document.write("programmer : "+coworkers.programmer+"<br>");
+	  	document.write("programmer2 : "+coworkers.programmer2+"<br>");
+	  	coworkers.programmer3 = "programmer3";//객체에 값 추가
+	  	document.write("programmer3 : "+coworkers["programmer3"]+"<br>");
+	  	coworkers["data programmer4"] = "programmer4";
+	  	document.write("data programmer4 : "+coworkers["data programmer4"]+"<br><br>");//객체의 키로 띄어쓰기를 원할때
+	  	
+	  	for(var key in coworkers){
+	  		document.write(key+' : '+coworkers[key]+'<br>');
+	  	}
+	  	
+	</script>
+</body>
+</html>
+

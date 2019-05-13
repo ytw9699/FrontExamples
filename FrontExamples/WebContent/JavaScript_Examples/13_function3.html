@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <title>return</title>
+  <meta charset="utf-8">
+</head>
+<body>
+    <script>
+      function onePlusOne(){
+        document.write(1+1+'<br>');
+      }
+      onePlusOne();
+      
+      function sum(left, right){
+        document.write(left+right+'<br>');
+      }
+      
+      function sumColorRed(left, right){
+        document.write('<div style="color:red">'+left+right+'</div><br>');//숫자가 아니라 문자열로인식하는듯
+      }
+      
+      sum(2,3); // 5
+      sumColorRed(2,3); // 23
+      
+    </script>
+    
+    <h2>Return</h2>
+	    <script>
+	      function sum2(left, right){
+	    	  
+	        return left+right;
+	      }
+	      
+	      document.write(sum2(2,3)+'<br>');
+	      document.write('<div style="color:red">'+sum2(2,3)+'</div>');
+	      document.write('<div style="font-size:3rem;">'+sum2(2,3)+'</div>');
+	    </script>
+</body>
+</html>
+
