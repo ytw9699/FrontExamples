@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
     <head>
+	  <title>val/keyup</title>
         <style>p {
                 color:blue;
                 margin:8px;
@@ -13,10 +14,10 @@
         <p>
         </p>
         <script>
-        $("input").keyup( function () {//.keyup이벤트를 설치만해둔것인듯
-                var value = $(this).val();
-                $("p").text(value);
-            }).keyup();//.keyup();은 트리거임 .keyup을 호출
+        $("input").keyup( function () {//keyup은 누르고땟을때임, keyup이벤트를 1차적으로 설치만해둔것이다
+                var value = $(this).val();//이벤트가 발생된 엘리먼트의 밸류값을 가져옴
+                $("p").text(value);//text는 컨텐트영역에 값을 넣어주는거
+            }).keyup();//.keyup();은 트리거임 .위의 keyup을 호출한다, 그러니처음 로드됬을때 글자가 보이는거
         </script>
     </body>
 </html>

@@ -2,19 +2,22 @@
 <!DOCTYPE html>
 <html>
     <head>
+	  <title>자식으로 삽입</title>
+	  <meta charset="utf-8">
+	</head>
         <style>
             p {
                 background:yellow;
             }
         </style>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
         <p>
             I would like to say:
         </p>
         <script>
-        $("p").append("<strong>Hello</strong>");//p태그안
+        $("p").append("<strong>Hello</strong>");//p태그안 자식으로 삽입
         </script>
     </body>
 </html>

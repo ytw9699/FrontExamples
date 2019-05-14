@@ -1,20 +1,23 @@
-﻿<!-- http://api.jquery.com/after/ -->
+﻿<!-- http://api.jquery.com/append/ -->
 <!DOCTYPE html>
 <html>
     <head>
+	  <title>형제로 삽입</title>
+	  <meta charset="utf-8">
+	</head>
         <style>
             p {
                 background:yellow;
             }
         </style>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
         <p>
             I would like to say:
         </p>
         <script>
-        $("p").after("<b>Hello</b>");//p태그 다음
+        $("p").after("<strong>Hello</strong>");//p태그안 자식으로 삽입
         </script>
     </body>
 </html>

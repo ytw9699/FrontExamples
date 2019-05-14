@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+	  <title>부모로 wrap하기</title>
         <style>
             div {
                 border:2px blue solid;
@@ -21,10 +22,10 @@
     </head>
     <body>
         <span>Span Text</span>
-        <strong>What about me?</strong>
+       	 <strong>What about me?</strong>
         <span>Another One</span>
-        <script>
-        $("span").wrap("<div><div><p><em><b></b></em></p></div></div>");
-        </script>
+	        <script>
+	        $("span").wrap("<div><div><p><em><b></b></em></p></div></div>");//span태그에만 부모로 감싸는거
+	        </script>
     </body>
 </html>

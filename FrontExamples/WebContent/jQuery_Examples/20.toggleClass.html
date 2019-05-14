@@ -2,19 +2,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>p {
-                margin: 4px;
-                font-size:16px;
-                font-weight:bolder;
-                cursor:pointer;
-            }
-            .blue {
-                color:blue;
-            }
-            .highlight {
-                background:yellow;
-            }
-        </style>
+	  <title>toggleClass</title>
+	        <style>p {
+	                margin: 4px;
+	                font-size:16px;
+	                font-weight:bolder;
+	                cursor:pointer;
+	            }
+	            .blue {
+	                color:blue;
+	            }
+	            .highlight {
+	                background:yellow;
+	            }
+	        </style>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
     </head>
     <body>
@@ -22,12 +23,12 @@
         <p class="blue highlight"> highlight </p>
         <p class="blue"> on these </p>
         <p class="blue"> paragraphs </p>
-        <script>
-             $("p").click( function () {
-                 $(this).toggleClass("highlight");//this는 클릭된 엘리머튼//
-                 //하이라이트클래스를 가지고있으면 없애고 없으면 추가해줌
-                 //.addClass(), .hasClass(), .removeClass(),
-             });
-         </script>
+        	<script>
+	             $("p").click( function () {
+	                 $(this).toggleClass("highlight");//this는 클릭된 엘리머튼//
+	                 //하이라이트클래스를 가지고있으면 없애고 없으면 추가해줌
+	                 //.addClass(), .hasClass(), .removeClass()는 나중에봐보자
+	             });
+            </script>
     </body>
 </html>

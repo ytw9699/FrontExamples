@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+	  <title>제이커리 폼</title>
+        <style>
+            span {
+            }
+        </style>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+    </head>
+    <body>
+        <p>
+            <input type="text" />
+            <span></span>
+        </p>
+        <script>
+            $("input").focus( function () {//focus는 이벤트타입 포커스에 대한 헬퍼
+                $(this).next("span").html('focus');//this는 인풋 엘리먼트//next는 인풋의 형제 엘리먼트중 span을 찾겠다는것,span이라는 셀렉터를 준것
+            }).blur( function() {    //html은 엘리먼트의 컨텐트영역으로 인서트 시키는것
+                $(this).next("span").html('blur');//focus를 빼면 blur
+            }).change(function(e){ //아래에 e를 쓸거면 fuction(e)라고써줘야하는거고 안쓸거면fuction()이렇게써줘도됨
+                alert('change!! '+$(e.target).val());//e.target는  this와 같음
+            }).select(function(){//select는 데이터를 선택했을때
+                $(this).next("span").html('select');
+            });
+        </script>
+    </body>
+</html>

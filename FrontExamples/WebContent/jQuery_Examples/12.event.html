@@ -1,25 +1,26 @@
 ﻿<html>
     <head>
-   <script type="text/javascript" 
-   src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-   <script type="text/javascript">
+  <title>이벤트bind,unbind,trigger</title>
+  <meta charset="utf-8">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+   <script>
        function clickHandler(e){
            alert('thank you');
        }
        $(document).bind('ready', function(){//bind는 이벤트를 설치하는것
-    	   //ready라는 이벤트를 설치해서 //웹페이지가 다운로드가 끝난상황을 체크하고 바디안에있는 잇풋들이 안착이되면
-    	   //input버튼에 이벤트를 설치하는것//
-            $('#click_me').bind('click', clickHandler);
+    	   //ready라는 이벤트를 설치해서 //웹페이지가 다운로드가 끝난상황을 체크하고 바디안에있는 잇풋들이 안착이되면 ready이벤트가 발생하면서
+    	   //함수호출하고 아래처럼 
+            $('#click_me').bind('click', clickHandler);//input버튼에 이벤트를 설치하는것//button이 클릭됬을때 clickHandler실행
             $('#remove_event').bind('click', function(e){//이거는 익명함수 이름이 없는 함수//재활용안할거면 이렇게쓰고 할거면 위(clickHandler)로직처럼해라
-                $('#click_me').unbind('click', clickHandler);//이렇게 다써줘야 삭제됨
+                $('#click_me').unbind('click', clickHandler);//이렇게 2개인자 다써줘야 삭제됨,이벤트제거
             });
-            $('#trigger_event').bind('click', function(e){
-                $('#click_me').trigger('click');
+            $('#trigger_event').bind('click', function(e){//trigger_event엘리먼트의 버튼을 클릭하면 함수실행하는 이벤트 설치하는거
+                $('#click_me').trigger('click');//#click_me엘리먼트에설치된 이벤트중에 click이라는이벤트타입을 가진 이벤트를 호출해라
             });
         })
    </script>
 </head>
-<body>
+	<body>
         <input id="click_me" type="button" value="click me" />
         <input id="remove_event" type="button" value="unbind" />
         <input id="trigger_event" type="button" value="trigger" />

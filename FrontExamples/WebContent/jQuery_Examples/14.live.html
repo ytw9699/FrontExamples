@@ -1,13 +1,15 @@
 ﻿<html>
-    <head>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-        <script type="text/javascript">
+<head>
+  <title>이벤트live/die</title>
+  <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>
             function clickHandler(e) {
                 alert('thank you');
             }
             $('#click_me').live('click', clickHandler);
-            $('#remove_event').live('click', function(e) {
-                $('#click_me').die('click', clickHandler);
+            $('#remove_event').live('click', function(e) {//라이브는 이벤트 설치
+                $('#click_me').die('click', clickHandler);//die는 이벤트 삭제
             });
             $('#trigger_event').live('click', function(e) {
                 $('#click_me').trigger('click');
@@ -22,4 +24,4 @@
 </html>
 
 <!-- live를 이용하면 존재하지 않는 엘리먼트에 대해서 이벤트를 설치할 수 있다.
-나중에 그엘리먼트가 생겨나면 적용하게됨 -->
+나중에 그엘리먼트가 생겨나면 적용하게됨 하지만 성능상 안좋을수있어서 바인드나 이벤트헬퍼를쓰자-->
