@@ -1,0 +1,30 @@
+﻿<html>
+<head>
+  <title>wrapper,click이벤트는 나중에자세히볼거임</title>
+  <meta charset="utf-8">
+</head>
+    <body>
+    
+        <ul>
+            <li>test2</li>
+        </ul>
+        
+        <ul class="foo">
+            <li>test</li>
+        </ul>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            (function($){            
+                $('ul.foo').click( function() {//ul.foo은 ul엘리먼트중 foo클래스의 엘리먼트가 클릭되었을때 함수실행
+   $('li', this).css('background-color','red');//('li', this)에서 this는 이벤트를 발생시킨 엘리먼트 ul.foo임  
+ /* 그런데 최종적으로 $('li', this)의 의미는 
+   <ul class="foo">
+  	 <li>test</li>
+   </ul>
+   이 안에서 <li>test</li>만 선택한다는뜻이다 */ 
+                });
+            })(jQuery)
+        </script>
+    </body>
+</html>
