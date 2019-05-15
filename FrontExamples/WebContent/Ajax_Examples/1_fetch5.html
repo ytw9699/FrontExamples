@@ -1,0 +1,21 @@
+﻿<!doctype html>
+<html>
+<head>
+  <title>text에 담아서 출력</title>
+  <meta charset="utf-8">
+</head>
+  <body>
+    <article>
+ 
+    </article>
+    
+    <input type="button" value="fetch" onclick="
+      fetch('test.html').then(function(response){//fecthapi에 보면 then인자 함수의 첫번째 인자에 response객체를 주기로 약속됨
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;//test.html의 내용을 text에 담아서 출력
+          //querySelector('article')아티클이라는 태그를 선택
+        })
+      });
+    ">
+  </body>
+</html>

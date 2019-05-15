@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html>
+	<head>
+	  <title>처음 로드시 ajax를 이용한 페이지변환</title>
+	  <!-- 이방식은 pjax보다 못하다. 왜냐면 검색엔진에서 노출이 안되고, 뒤로가기 앞으로가기시 적용이안됨 -->
+	  <meta charset="utf-8">
+	</head>
+<body>
+
+  <h1><a href="#!welcome.html">welcome</a></h1>
+  <!-- 현재페이지에서 "#!welcome.html"만 해주면 주소는 바뀌지만 실제적용을 하려면 새로고침해야함 -->
+  
+  <ol id="nav">
+	    <li><a href="#!test.html" onclick="fetchPage('test.html')">test</a></li>
+	    <li><a href="#!welcome.html" onclick="fetchPage('welcome.html')">welcome</a></li>
+	  <!--  1.페이리 리로드없이 부분만 가져오는 ajax의장점
+	   2. 새로고침 보완 해주는게 onclick="fetchPage('welcome.html')"이다 -->
+  </ol>
+  
+  <article>
+  </article>
+  
+  <script>
+	  function fetchPage(name){
+	    fetch(name).then(function(response){
+	      response.text().then(function(text){
+	        document.querySelector('article').innerHTML = text;
+	      })
+	    });
+	  }
+	  
+	  if(location.hash){
+	    fetchPage(location.hash.substr(2));//처음에 연결됨
+	  } else {
+	    fetchPage('welcome.html');
+	  }
+  </script>
+  
+</body>
+</html>

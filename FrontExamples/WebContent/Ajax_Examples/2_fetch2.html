@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html>
+	<head>
+	  <title>refactoring</title>
+	  <meta charset="utf-8">
+	</head>
+<body>
+  
+   <h1><a href="index.html">WEB</a></h1>
+  <ol>
+    <li><a onclick="fetchPage('test.html')">HTML</a></li>
+    <li><a onclick="fetchPage('welcome.html')">CSS</a></li>
+  </ol>
+  
+  <article>
+  </article>
+  
+  <script>
+	  function fetchPage(name){
+	    fetch(name).then(function(response){
+	      response.text().then(function(text){
+	        document.querySelector('article').innerHTML = text;
+	      })
+	    });
+	  }
+  </script>
+  
+</body>
+</html>
