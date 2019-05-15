@@ -1,0 +1,20 @@
+﻿<!doctype html>
+<head>
+  <title>ajax의 최신기능 fetch</title>
+  <meta charset="utf-8">
+</head>
+<html>
+  <body>
+  
+    <input type="button" value="fetch" onclick="
+     function callbackme(){
+     console.log('response end');
+     }
+     fetch('test.html').then(callbackme);//fetch는 서버에게 test.html을 가져오라고 요청을하는것 //then은 요청의 응답이 완료되면 실행됨
+     console.log(1);//그런데 서버로부터 응답받는데 시간이 오래 걸리면 그 응답전에 먼저 이 콘솔 로그 코드를 먼저 실행하게됨
+     console.log(2);//그리고 다시 then(callbackme)를 마지막으로 출력//원래는 then이 순서대로 먼저 실행되는게 동기인데
+     //이렇게 응답을 기다리면서 다른 코드를 먼저 실행하게되면 동시에 진행되는거고 이런게 비동기임 asynchronous
+     ">
+     
+  </body>
+</html>

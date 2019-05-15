@@ -1,0 +1,21 @@
+﻿<!doctype html>
+<head>
+  <title>response객체 못받기</title>
+  <meta charset="utf-8">
+</head>
+<html>
+  <body>
+  
+    <input type="button" value="fetch" onclick="
+     fetch('notfile.html').then(function callbackme(response){
+    	 if(response.status == '404'){
+    		 console.log('not found');
+    		 alert('not found');
+    	 }
+     });
+     console.log(1);
+     console.log(2);
+     ">
+     
+  </body>
+</html>

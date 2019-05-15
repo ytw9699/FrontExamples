@@ -1,0 +1,18 @@
+﻿<!doctype html>
+<head>
+  <title>response객체 받기</title>
+  <meta charset="utf-8">
+</head>
+<html>
+  <body>
+  
+    <input type="button" value="fetch" onclick="
+     fetch('test.html').then(function callbackme(response){//response객체에는 응답한결과가있다
+     console.log(response);//response객체 받기 status 200이면 잘 받은거임
+     });
+     console.log(1);
+     console.log(2);
+     ">
+     
+  </body>
+</html>
