@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+		<title>순서대로읽는다</title>
+  		<meta charset="utf-8">
+    <script src="5_script.js"></script>
+    <!-- 보통 이렇게 위에 둘려고 한다 쉽게 볼려고 하지만 -->
+</head>
+<body>
+    <input type="button" id="hw" value="Hello world" />
+</body>
+</html>
+<!-- 5_script.js:2 Uncaught TypeError: Cannot read property 'addEventListener' of null
+
+    오류 발생 왜냐하면 html input태그 실행전에 자바스크립트가 실행되기때문에..그래서해결방법은 다음-->

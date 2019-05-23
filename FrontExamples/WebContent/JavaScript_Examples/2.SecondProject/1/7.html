@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>순서대로읽지않음</title>
+		<meta charset="utf-8">
+    <script>
+    window.onload = function(){//브라우저객체는 웹페이지가 다 로드된후,이미지등등 그리고 window.onload를 호출한다
+        var hw = document.getElementById('hw');//호출했을때 이함수가 실행되게끔한다
+        hw.addEventListener('click', function(){
+            alert('Hello world');
+        })
+    }
+    </script>
+</head>
+<body>
+    <input type="button" id="hw" value="Hello world" />
+</body>
+</html>
+
