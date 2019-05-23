@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>새 창에 접근</title>
+  		<meta charset="utf-8">
+</head>
+<body>
+    <input type="button" value="open" onclick="winopen();" />
+    <input type="text" onkeypress="winmessage(this.value)" />
+    			<!-- onkeypress는 타이핑할때마다 실시간으로  winmessage함수 호출 ,
+    			this.value는 텍스트에 적힌값 -->
+    <input type="button" value="close" onclick="winclose()" />
+    <script>
+    function winopen(){
+        win = window.open('18_window_open.html', 'ot', 'width=300px, height=500px');
+        //win은 윈도우 오픈을 통해 오픈한 18_window_open.html가 담겨있는 새창에 대한 윈도우 객체
+    }
+    function winmessage(msg){
+        win.document.getElementById('message').innerText = msg;
+    }
+    function winclose(){
+        win.close();
+    }
+    </script>
+    </body>
+</html>

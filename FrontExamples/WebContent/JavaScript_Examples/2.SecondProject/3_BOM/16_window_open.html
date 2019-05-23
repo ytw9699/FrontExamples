@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>창제어</title>
+  		<meta charset="utf-8">
+</head>
+<style>li {padding:10px; list-style: none}</style>
+<body>
+<ul>
+    <li>
+        <input type="button" onclick="open1()" value="window.open('test.html');" />
+    </li>
+     <li>
+        <input type="button" onclick="open3()" value="window.open('test.html', '_blank');" />
+    </li>
+     <li>
+        <a href="test.html" target="_blank">test.html</a>
+    </li>
+    <li>
+        <input type="button" onclick="open2()" value="window.open('test.html', '_self');" />
+    </li>
+     <li>
+         <a href="test.html" target="_self">open('test.html', '_self')</a>
+    </li>
+   
+    <li>
+        <input type="button" onclick="open4()" value="window.open('test.html', 'ot');" />
+    </li>
+    <li>
+        <input type="button" onclick="open5()" value="window.open('test.html', '_blank', 'width=200, height=200, resizable=yes');" />
+    </li>
+</ul>
+ 
+<script>
+function open1(){
+    window.open('test.html');//새창
+}
+function open2(){
+    window.open('test.html', '_self');//자기자신의 탭
+}
+function open3(){
+    window.open('test.html', '_blank');//새창
+}
+function open4(){
+    window.open('test.html', 'ot');//한번 새창이 열리면 더이상 안열림
+    }
+function open5(){//새창이열리는데 크기조절
+    window.open('test.html', '_blank', 'width=200, height=200, resizable=yes');//resizable=no는 먹지를 않는다 보안상..no로하면 크기를 조정못하는건데 원래
+}
+</script>
+</body>
+</html>

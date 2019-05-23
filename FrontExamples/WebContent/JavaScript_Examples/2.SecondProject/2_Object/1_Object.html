@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Object</title>
+  		<meta charset="utf-8">
+  		<!-- 자바스크립트로 브라우저를 제어하기 위해 브라우저는 이미 모든태그들에대해 객체를 만들어둠,
+  		그러면 우리는 그 객체를 찾아서 ,객체를 대상으로 메소드나,프로퍼티를 가져와서 객체를 제어하는것 -->
+</head>
+	<body>
+	<img src="2.windowObject.png">
+			<!-- style ="width:50px;" -->
+			<script type= "text/javascript">
+			   var imgs  = window.document.getElementsByTagName('img');
+					alert(imgs);//이건 배열이고 [<img src="/JavaScript/21-1.Object/windowObject.png">]
+					window.alert(imgs[0]);//<img src="/JavaScript/21-1.Object/windowObject.png"> 이 객체이고
+					//이러한 객체를 통한 제어를 하는게 자스이다
+					//그리고 window도 윈도우창 객체임 윈도우가 가지고있는 메소드 alert
+			</script>
+		 <input type ="button" value="크기변환" onclick ="imgs[0].style.width='400px'"/>
+	</body>
+</html>
