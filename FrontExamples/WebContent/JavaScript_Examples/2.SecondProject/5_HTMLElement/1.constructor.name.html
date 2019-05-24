@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+ <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li id="active">JavaScript</li>
+</ul>
+
+<script>
+
+    var li = document.getElementById('active');
+    console.log(li.constructor.name);//li라는 객체의 이름을 알아냄,어떤 오브젝트인가
+    //HTMLLIElement 
+    
+    var lis = document.getElementsByTagName('li');//유사배열 객체얻어냄
+    console.log(lis.constructor.name);//객체의 이름은 HTMLCollection
+    
+</script>  
+
+</body>
+
+
+
+
+
+

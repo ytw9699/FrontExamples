@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>조회</title>
+  		<meta charset="utf-8">
+</head>
+<body>
+<ul>
+    <li>html</li>
+    <li>css</li>
+    <li>JavaScript</li>
+</ul>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+	var li = $('li');//유사배열
+	
+	console.log(li);
+	
+	console.log(li[0]);
+	console.log(li[1]);
+	console.log(li[2]);
+	
+	console.log(li.length);
+	
+	 for(var i=0; i<li.length; i++){//li는 제이커리 객체
+	        console.log(li[i]);//이건 제이커리 객체가아니라 돔객체
+	        console.log(li[i].constructor);//이거는 제이커리객체가 아니라 dom객체인것이다
+	 } 
+	 
+	 for(var i=0; i<li.length; i++){
+	      //console.log((li[i]).css('color','red'));//그래서 이거는 실행이안됨 제이커리 객체가 아니라서
+	 } 
+	 
+	 for(var i=0; i<li.length; i++){
+		 console.log($(li[i]).css('color','red'));//이거는 돔객체를 제이커리 함수안에 집어넣어서 제이커리객체라 실행됨
+	 } 
+   
+</script>
+
+</body>
+</html>

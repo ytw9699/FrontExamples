@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>map</title>
+  		<meta charset="utf-8">
+</head>
+
+<body>
+
+<ul>
+    <li>html</li>
+    <li>css</li>
+    <li>JavaScript</li>
+</ul>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    var li = $('li');//제이커리 메소드중 map 메소드는 인자로 함수받음//그러면 map이 li 태그를 하나씩 순회시작함
+    li.map(function(index, elem){//index는 li의 첫번째 0,1,2,과 , elem로 li-dom객체를 각각 순회하면서 전달 HTMLLIElement
+        console.log(index, elem);
+        $(elem).css('color', 'red');//돔객체를 제이커리함수안에 넣어서 사용
+    })
+</script>
+
+</body>
+</html>

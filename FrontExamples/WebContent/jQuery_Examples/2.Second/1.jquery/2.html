@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>다음장과 비교,dom을 이용한것</title>
+  		<meta charset="utf-8">
+</head>
+
+<body>
+   <ul>
+	  <li>HTML</li>
+	  <li>CSS</li>
+	  <li>JavaScript</li>
+  </ul>
+  <script>
+  
+	  var lis = document.getElementsByTagName('li');//다음장에 이것과 똑같은결과
+	  for(var i=0; i < lis.length; i++){
+	      lis[i].style.color='red'; 
+	  }
+      
+  </script>
+</body>
+</html>
+
+
+
+
+
+
