@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <body>
-   <!--자기 자신을 참조하는 불편한 방법 인라인 방식 inline-->
+   <!--자기 자신을 참조하는 불편한 방법-->
 <input type="button" id="target" 
 onclick="alert('Hello world,'+document.getElementById('target').value);" value="button" />
 
@@ -12,7 +12,7 @@ onclick="alert('Hello world,'+document.getElementById('target').value);" value="
 </body>
 </html>
 
-<!-- 인라인 방식은 태그에 이벤트가 포함되기 때문에 이벤트의 
+<!--   인라인 방식 inline,인라인 방식은 태그에 이벤트가 포함되기 때문에 이벤트의 
 소재를 파악하는 것이 편리하다. 
 하지만 정보인 HTML과 제어인 JavaScript가 혼재된 형태이기
- 때문에 바람직한 방법이라고 할수는 없다. -->
+ 때문에 바람직한 방법이라고 할수는 없고, 인풋태그안에 들어가서 복잡한것을 넣으면 가독성도 떨어진다 -->
