@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>이벤트 삭제2</title>
+  		<meta charset="utf-8">
+</head>
+<body>
+  	<input type="text" id="target" />
+	<input id="remove"  type="button" value="remove" />
+	<p id="status"></p>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+	<script>
+		  var handler = function(e){
+			  console.log(1); 
+		    $('#status').text(e.type+Math.random());
+		    console.log(2);
+		  };
+		  $('#target').on('focus blur', handler)//focus 이것만삭제
+		  $('#target').on('focus', function(e){
+			  console.log(3);
+		  });
+		  
+		  $('#remove').on('click' , function(e){
+		    $('#target').off('focus', handler);//이것만삭제
+		  })
+		  
+	</script>
+</body>
+</html>

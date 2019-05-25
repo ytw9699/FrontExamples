@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>값이 비어있으면 이벤트 막기</title>
+  		<meta charset="utf-8">
+</head>
+<body>
+
+	<form id="target" action="result.html">
+	    <label for="name">name</label> 
+	    <input id="name" type="text" />
+	    <input type="submit" />
+	</form>
+
+<script>
+	var t = document.getElementById('target');
+	
+	t.addEventListener('submit', function(event){
+	    if(document.getElementById('name').value.length === 0){
+	        alert('Name 필드의 값이 누락 되었습니다');
+	        event.preventDefault();
+	    }
+	});
+</script>
+
+</body>
+</html>

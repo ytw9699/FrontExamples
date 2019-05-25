@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PHP의 데이터를 JSON 형식으로 전환해주어 받은후
+그것을 파싱해서 자바스크립트 객체로만들고 배열로만들어줌</title>
+</head>
+<body>
+		<p id="timezones"></p>
+	<input type="button" id="execute" value="execute" />
+	<script>
+		document.querySelector('input').addEventListener('click', function(event){
+		    var xhr = new XMLHttpRequest();
+		    xhr.open('GET', './time2.php');
+		    xhr.onreadystatechange = function(){
+		        if(xhr.readyState === 4 && xhr.status === 200){
+		            var _tzs = xhr.responseText;
+		            var tzs = JSON.parse(_tzs);//PHP의 데이터를 JSON 형식으로 전환해주어 받은후
+		            //그것을 파싱해서 자바스크립트 객체로만들고 배열로만들어줌
+		            //string 객체를 json 객체로 변환시켜줍니다
+		            //JSON.parse() 메소드는 JSON.stringify() 메소드와는 반대로 인수로 전달받은 문자열을 자바스크립트 객체로 변환하여 반환합니다.
+		            //text에는 변환할 문자열을 전달합니다.
+					//이때 해당 문자열은 반드시 유효한 JSON 형식의 문자열이어야 합니다.
+					//JSON.parse() 메소드는 오직 JSON 형식의 문자열만을 변환할 수 있습니다.
+		            var _str = '';
+		            for(var i = 0; i< tzs.length; i++){
+		                _str += '<li>'+tzs[i]+'</li>';
+		            }
+		            _str = '<ul>'+_str+'</ul>';
+		            document.querySelector('#timezones').innerHTML = _str;
+		        }
+		    }
+		    xhr.send(); 
+		}); 
+	</script> 
+</body>
+</html>

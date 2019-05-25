@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>late binding
+jQuery는 존재하지 않는 엘리먼트에도 이벤트를 등록할 수 있는 놀라운 기능을 제공한다</title>
+  		<meta charset="utf-8">
+</head>
+<body>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+	    $('body').on('click','a, li', function(event){//바디를 지정하면 나중에 a,li가 추가되도 이벤트설치 가능!
+	        console.log(this.tagName);
+	    })
+	</script>
+	<ul>
+	    <li><a href="#">HTML</a></li>
+	    <li><a href="#">CSS</a></li>
+	    <li><a href="#">JavaScript</a></li>
+	</ul>
+  
+</body>
+</html>

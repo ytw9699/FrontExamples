@@ -1,5 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
+<head>
+	<title>캡쳐링</title>
+  		<meta charset="utf-8">
+</head>
     <head>
         <style>
             html{border:5px solid red;padding:30px;}
@@ -16,9 +20,9 @@
         <script>
         function handler(event){
             var phases = ['capturing', 'target', 'bubbling']
-            console.log(event.target.nodeName, this.nodeName, phases[event.eventPhase-1]);
-        }
-        document.getElementById('target').addEventListener('click', handler, true);
+            console.log(event.target.nodeName, this.nodeName, phases[event.eventPhase-1]);//event.target.nodeName은 더 구체적이라 input이 출력
+        }//eventPhase는 가장 말단의 자식엘리먼트면 2 ,캡쳐링와중이면 1 , 버블링와중이면 3값을 가지는듯
+        document.getElementById('target').addEventListener('click', handler, true);//투르는 캡쳐링 폴스는 버블링
         document.querySelector('fieldset').addEventListener('click', handler, true);
         document.querySelector('body').addEventListener('click', handler, true);
         document.querySelector('html').addEventListener('click', handler, true);
