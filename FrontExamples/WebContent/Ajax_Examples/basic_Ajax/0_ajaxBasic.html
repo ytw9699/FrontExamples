@@ -13,10 +13,10 @@
                 $('#result').html('');//div안을 공백으로 해준다
                 $.ajax({//이안은 ajax의 인자 settings객체인데,통신할때 프로퍼티설정이다. 객체 안에 키와 값을 여러개넣어줌.그렇게객체의 속성을 만듬
                     url:'http://opentutorials.org/example/jquery/example.jquery.ajax.php',//서버가 위치하는 url을 적어줌
-                    dataType:'json',//서버가 리턴해주는 타입이 json형식이다
+                    dataType:'json',//서버가 리턴해주는 테스트 타입(json문자열?정도?)을 json형식의 배열로 바꿔주는듯
                     type:'POST',//보내는 데이터가 post방식이다
                     data:{'msg':$('#msg').val()},//msg는키 valu는 값//보내는 데이터
-                    success:function(result){//통신하고 결과가 성공이면//result는 서버가 리턴해준것을 배열형태로 담고있다. 
+                    success:function(result){//통신하고 결과가 성공이면//첫번째인자에 서버가 리턴해준게담긴다. result는 서버가 리턴해준것을 배열형태로 담고있다. 
                         if(result['result']==true){
                           $('#result').html(result['msg']);
                         }
