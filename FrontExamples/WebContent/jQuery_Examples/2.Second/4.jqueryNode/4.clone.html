@@ -14,10 +14,18 @@
  
 <input type="button" value="clone replaceAll target 1" id="btn1" />
 <input type="button" value="clone replaceWith target 2" id="btn2" />
+<input type="button" value="저장" id="btn3" />
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script>
+
+	var source = $('#source').clone();
+	var target1 = $('#target1').clone();
+	
     $('#btn1').click(function(){
-        $('#source').clone().replaceAll('#target1');//복제후 교체
+    	source.replaceAll('#target1');//복제후 교체
+    })
+     $('#btn3').click(function(){
+    	 target1.clone().replaceAll('#source');//복제후 교체
     })
     $('#btn2').click(function(){
         $('#target2').replaceWith($('#source').clone());//복제후 교체
