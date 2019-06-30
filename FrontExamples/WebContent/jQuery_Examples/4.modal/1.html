@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>위치</title>
+  		<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script></head>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<style>
+	.modal{
+		display: none;
+		}
+	</style>
+<body>
+  <button id="donateMoney">기부</button> 
+  
+	<div class="modal">
+        <button type="button" ><span aria-hidden="true">×</span></button>
+        <button type="button" >닫기</button>
+    </div>
+	
+	<script>
+		$("#donateMoney").on("click",function(event){
+			   $(".modal").modal("show"); 
+		 });
+	</script>
+</body>
+</html>
