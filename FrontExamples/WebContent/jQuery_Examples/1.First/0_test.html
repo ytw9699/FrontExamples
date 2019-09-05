@@ -1,0 +1,44 @@
+﻿<html>
+<head>
+  <title>테스트</title>
+  <meta charset="utf-8">
+</head>
+<style>
+.reReplyWriteForm{
+}
+
+</style>
+<body>
+<div id="test1" class="testEle testEle1">1</div>
+<div id="test2" class="testEle testEle2">2</div>
+<div id="test3" class="testEle testEle3">3</div>
+<button id="testBefore" type="button">Before() Example Click!</button>
+
+
+
+	<div class="reReplyWriteForm"><!--  대댓글쓰기 폼 -->
+		   <div> 
+                <textarea id="reReply_contents" rows="3" name='reReply_content' oninput="checkLength(this,900);"></textarea>
+           </div>  
+   		   <button id='reReplyRegisterBtn' type="button">등록</button>
+   		   <button id='reReplyCancelBtn' type="button">취소</button>
+		</div>  
+		
+	<ul id="list">
+	    <li id="201">첫 번째 아이템</li>
+	    <li>두 번째 아이템</li> 
+	</ul>
+	 
+   <div class="welcome"></div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script>
+     	
+     $("#201").after($(".reReplyWriteForm"));    
+     
+     $("#testBefore").click(function() {
+    	 $("#test1").before($("#test3"));
+    	 });
+     
+   </script>
+</body>
+</html>
