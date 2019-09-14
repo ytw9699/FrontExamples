@@ -2,32 +2,55 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-   	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-
-				$('a').click(function(e){
-				
-				console.log(e); 
-				console.log(e.target);
-				
-				console.log(e.currentTarget);
-				
-				console.log(this);
-				
-				e.preventDefault();
-			});
-            });
-        </script>
+	        <style>
+	        	.content{
+	        			border-style: solid;
+					    border-width: 1px;
+					    border-color: red;
+					    background-color: white;
+					    color: black;
+					    width: 20%;
+					    height: 100px;
+					    margin-left: 12%;
+					    margin-right: 64%;
+					    margin-top: 5%;
+					    float: right;
+				}
+				.overContent{
+					    border-style: solid;
+						border-width: 1px;
+						border-color: red;
+						background-color: green; 
+						color: black; 
+						width: 30%;
+						height: 250px;
+						margin-left:1% ; 
+						margin-right:1%; 
+						margin-top:1%;   
+				}
+	        </style>
     </head>
     <body>
-	    <a href=""><img src="test.png"/></a>
+   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+    	<div class="content">
+			content    	
+    	</div>
 		 
-		<div id="overlay">
-		
-		<div id="overlay_img"></div> 
-		
+		<div class="overContent"> 
+			overContent
 		</div>
+		
+		<script>  
+			$('html').click(function(e) { //html안 Usermenu, hideUsermenu클래스를 가지고있는 곳 제외하고 클릭하면 userMenubar숨김 이벤트발생
+				    console.log(e.target); 
+				    console.log(!$(e.target).is('.overContent'));
+				    
+				   		if( $(e.target).is('.overContent')) {  
+						  alert(" overContent 를 클릭했습니다.");
+						} 
+			   });  
+        </script>
     </body>
 </html>
 
